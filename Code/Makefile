@@ -11,7 +11,7 @@ CFLAGS	= $(DEBUG) -Wall $(INCLUDE) -Winline -pipe
 LDFLAGS	= -L$(DESTDIR)/lib
 LDLIBS    = -lwiringPi -lwiringPiDev -lpthread -lm -lcrypt -lrt
 
-SRC	=	temperature_humidite.c			\
+SRC	=	bCareful.c			\
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -19,9 +19,9 @@ BINS	=	$(SRC:.c=)
 
 all:	$(BINS)
 
-temperature_humidite:	temperature_humidite.o
+bCareful:	bCareful.o
 	$Q echo [link]
-	$Q $(CC) -o $@ temperature_humidite.o $(LDFLAGS) $(LDLIBS)
+	$Q $(CC) -o $@ bCareful.o $(LDFLAGS) $(LDLIBS)
 
 .c.o:
 	$Q echo [CC] $<
