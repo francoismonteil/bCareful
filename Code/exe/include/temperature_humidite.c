@@ -3,56 +3,61 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
-#include <time.h>
-#include "rwFile.h"
-#define MAXTIMINGS	5
+#define MAXTIMINGS	85
 #define DHTPIN		8
 int dht11_dat[5] = { 0, 0, 0, 0, 0 };
- 
+char temp[5];
+char hum[5];
 char * read_dht11_temp()
 {
-	uint8_t laststate	= HIGH;
-	uint8_t counter		= 0;
-	uint8_t j		= 0, i;
 	int done = 0;
- 	char temp[5];
- 
-	dht11_dat[0] = dht11_dat[1] = dht11_dat[2] = dht11_dat[3] = dht11_dat[4] = 0;
- 
-	pinMode( DHTPIN, OUTPUT );
-	digitalWrite( DHTPIN, LOW );
-	delay( 18 );
-	digitalWrite( DHTPIN, HIGH );
-	delayMicroseconds( 40 );
-	pinMode( DHTPIN, INPUT );
+	while(done == 0){
+		uint8_t laststate	= HIGH;
+		uint8_t counter		= 0;
+		uint8_t j		= 0, i;
+		
+	 	FILE *fic = fopen("/home/log_temp", "w");
+	 
+		dht11_dat[0] = dht11_dat[1] = dht11_dat[2] = dht11_dat[3] = dht11_dat[4] = 0;
+		fprintf(fic, "0 : %d\n", dht11_dat[0]);
+	 	
+		pinMode( DHTPIN, OUTPUT );
+		digitalWrite( DHTPIN, LOW );
+		delay( 18 );
+		digitalWrite( DHTPIN, HIGH );
+		delayMicroseconds( 40 );
+		pinMode( DHTPIN, INPUT );
 
-	for ( i = 0; i < MAXTIMINGS; i++ )
-	{
-		counter = 0;
-		while ( digitalRead( DHTPIN ) == laststate )
+		for ( i = 0; i < MAXTIMINGS; i++ )
 		{
-			counter++;
-			delayMicroseconds( 1 );
-			if ( counter == 255 )
+				counter = 0;
+				while ( digitalRead( DHTPIN ) == laststate )
+				{
+					counter++;
+					delayMicroseconds( 1 );
+					if ( counter == 255 )
+					{
+						break;
+					}
+				}
+				laststate = digitalRead( DHTPIN );
+		 		fprintf(fic, "laststate : %d\n", laststate);
+				if ( counter == 255 )
+					break;
+	 
+			if ( (i >= 4) && (i % 2 == 0) )
 			{
-				break;
+				dht11_dat[j / 8] <<= 1;
+				if ( counter > 16 )
+					dht11_dat[j / 8] |= 1;
+				j++;
 			}
 		}
-		laststate = digitalRead( DHTPIN );
- 
-		if ( counter == 255 )
-			break;
- 
-		if ( (i >= 4) && (i % 2 == 0) )
-		{
-			dht11_dat[j / 8] <<= 1;
-			if ( counter > 16 )
-				dht11_dat[j / 8] |= 1;
-			j++;
-		}
-	}
  	
- 	while(done == 0){
+	 	fprintf(fic, "j : %d\n", j);
+	 	fprintf(fic, "dht11_dat[4] : %d\n", dht11_dat[4]);
+	 	fprintf(fic, "Total dht11_dat : %d\n", (dht11_dat[0] + dht11_dat[1] + dht11_dat[2] + dht11_dat[3]) );
+ 	
 		if ( (j >= 40) &&
 		     (dht11_dat[4] == ( (dht11_dat[0] + dht11_dat[1] + dht11_dat[2] + dht11_dat[3]) & 0xFF) ) )
 		{
@@ -60,56 +65,66 @@ char * read_dht11_temp()
 			done = 1;
 		}else  {
 			done = 0;
+			//fprintf(fic, "error\n");
 		}
+		delay(1000);
+		fprintf(fic, "done : %d\n", done);
 	}
 	
-	return temp;
+	return (char *)temp;
 }
+
 
 char * read_dht11_hum()
 {
-	uint8_t laststate	= HIGH;
-	uint8_t counter		= 0;
-	uint8_t j		= 0, i;
 	int done = 0;
- 	char hum[5];
- 
-	dht11_dat[0] = dht11_dat[1] = dht11_dat[2] = dht11_dat[3] = dht11_dat[4] = 0;
- 
-	pinMode( DHTPIN, OUTPUT );
-	digitalWrite( DHTPIN, LOW );
-	delay( 18 );
-	digitalWrite( DHTPIN, HIGH );
-	delayMicroseconds( 40 );
-	pinMode( DHTPIN, INPUT );
+	while(done == 0){
+		uint8_t laststate	= HIGH;
+		uint8_t counter		= 0;
+		uint8_t j		= 0, i;
 
-	for ( i = 0; i < MAXTIMINGS; i++ )
-	{
-		counter = 0;
-		while ( digitalRead( DHTPIN ) == laststate )
+	 	FILE *fic = fopen("/home/log_hum", "w");
+	 
+		dht11_dat[0] = dht11_dat[1] = dht11_dat[2] = dht11_dat[3] = dht11_dat[4] = 0;
+		fprintf(fic, "0 : %d\n", dht11_dat[0]);
+	 	
+		pinMode( DHTPIN, OUTPUT );
+		digitalWrite( DHTPIN, LOW );
+		delay( 18 );
+		digitalWrite( DHTPIN, HIGH );
+		delayMicroseconds( 40 );
+		pinMode( DHTPIN, INPUT );
+
+		for ( i = 0; i < MAXTIMINGS; i++ )
 		{
-			counter++;
-			delayMicroseconds( 1 );
-			if ( counter == 255 )
+			counter = 0;
+			while ( digitalRead( DHTPIN ) == laststate )
 			{
+				counter++;
+				delayMicroseconds( 1 );
+				if ( counter == 255 )
+				{
+					break;
+				}
+			}
+			laststate = digitalRead( DHTPIN );
+	 		fprintf(fic, "laststate : %d\n", laststate);
+			if ( counter == 255 )
 				break;
+	 
+			if ( (i >= 4) && (i % 2 == 0) )
+			{
+				dht11_dat[j / 8] <<= 1;
+				if ( counter > 16 )
+					dht11_dat[j / 8] |= 1;
+				j++;
 			}
 		}
-		laststate = digitalRead( DHTPIN );
- 
-		if ( counter == 255 )
-			break;
- 
-		if ( (i >= 4) && (i % 2 == 0) )
-		{
-			dht11_dat[j / 8] <<= 1;
-			if ( counter > 16 )
-				dht11_dat[j / 8] |= 1;
-			j++;
-		}
-	}
+	 	
+	 	fprintf(fic, "j : %d\n", j);
+	 	fprintf(fic, "dht11_dat[4] : %d\n", dht11_dat[4]);
+	 	fprintf(fic, "Total dht11_dat : %d\n", (dht11_dat[0] + dht11_dat[1] + dht11_dat[2] + dht11_dat[3]) );
  	
- 	while(done == 0){
 		if ( (j >= 40) &&
 		     (dht11_dat[4] == ( (dht11_dat[0] + dht11_dat[1] + dht11_dat[2] + dht11_dat[3]) & 0xFF) ) )
 		{
@@ -117,9 +132,11 @@ char * read_dht11_hum()
 			done = 1;
 		}else  {
 			done = 0;
+			//fprintf(fic, "error\n");
 		}
+		delay(1000);
+		fprintf(fic, "done : %d\n", done);
 	}
 	
-	return hum;
+	return (char *)hum;
 }
-
