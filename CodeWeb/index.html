@@ -14,10 +14,17 @@
       $("#header").load("header.html");
     });
   </script> 
+  <script src="jsFunctions/JSONReader.js"></script>
 </head>
 
 
-<body>
+<body onload="readTextFile('../../data/test.json', function(text){
+  var data = JSON.parse(text);
+  console.log(data);
+  data.forEach(element => {
+    console.log(element.Humidite);
+  });
+});">
 
   <!-- container section start -->
   <section id="container" class="">

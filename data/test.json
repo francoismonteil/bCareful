@@ -3,5 +3,15 @@
 		"Temperature": 24.0,
 		"Humidite": 65.0,
 		"Luminosite": 32.55
+	},
+	{
+		"Temperature": 26.0,
+		"Humidite": 75.0,
+		"Luminosite": 22.55
+	},
+	{
+		"Temperature": 24.0,
+		"Humidite": 65.0,
+		"Luminosite": 32.55
 	}
 ]

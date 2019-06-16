@@ -51,6 +51,8 @@ $("#status7").sparkline([3,6,3,9,9,5,4,6,5,6,4,9,7,6,7,8,8,5], {
     lineColor: '#436B91',
     fillColor: '#fff'});
 
+// graphique
+
 $("#todayspark1").sparkline([8,11,9,12,10,9,13,11,12,11,10,12,11], {
     type: 'bar',
     height: '30',
@@ -75,12 +77,18 @@ $("#todayspark4").sparkline([8,11,9,12,10,9,13,11,12,11,10,12,11,12,11], {
     barWidth: 10,
     barColor: '#486b60'});
 
-$("#todayspark5").sparkline([3,6,3,9,9,5,4,6,5,6,4,9,7,9,7,4,6,8,9,5,6,7,8], {
+$("#todayspark5").sparkline([10.3,14.2,13.3,7.5,6.3,8.5,9.4,15.25,8.7], {
     type: 'line',
     width: '250',
     height: '30',
     lineColor: '#436B91',
     fillColor: '#efefef'});
+
+$("#todayspark1").update();
+$("#todayspark2").update();
+$("#todayspark3").update();
+$("#todayspark4").update();
+$("#todayspark5").update();
 
 
 /* Sparkline plugin section ends */
