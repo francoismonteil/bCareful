@@ -4,7 +4,8 @@ endif
 
 DEBUG	= -O3
 DESTDIR?=exe
-CC=tools-master/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-gcc
+#CC=tools-master/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-gcc
+CC=gcc
 
 INCLUDE	= -I$(DESTDIR)/include
 CFLAGS	= $(DEBUG) -Wall $(INCLUDE) -Winline -pipe

@@ -8,6 +8,8 @@ typedef unsigned int uint;
 #define     ADC_CLK   1
 #define     ADC_DIO   2
 
+char value[5];
+
 uchar get_ADC_Result(void)
 {
 	uchar i;
@@ -50,14 +52,14 @@ uchar get_ADC_Result(void)
 	return(dat1==dat2) ? dat1 : 0;
 }
 
-float luminosite(void)
+char *luminosite(void)
 {
 	uchar analogVal;
 	uchar illum;
 
 	if(wiringPiSetup() == -1){ //when initialize wiring failed,print messageto screen
 		printf("setup wiringPi failed !");
-		return 1; 
+		exit(1); 
 	}
 
 	pinMode(ADC_CS,  OUTPUT);
@@ -66,5 +68,8 @@ float luminosite(void)
 	analogVal = get_ADC_Result();
 	illum = 255 - analogVal;
 	delay(500);
-	return (illum*100)/255.0;
+	
+	sprintf(value, "%.2f", (illum*100)/255.0);
+	
+	return value;
 }

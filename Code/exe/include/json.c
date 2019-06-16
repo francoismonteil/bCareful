@@ -2,21 +2,31 @@
 #include <time.h> 
 
 
-void json(char * temp, char * hum, float lum){
+int json(char * temp, char * hum, char * lum, int pleure){
 	time_t timestamp = time(NULL);
-	struct tm * t = localtime(&timestamp);
-
-	int jour = 1+t->tm_mday;
-	int mois = 1+t->tm_mon;
-	int annee = 1900+t->tm_year;
-	FILE *fic = fopen("/home/data", "a");
-
-	fprintf(fic, "[\n");
-		fprintf(fic, "{\n");
-			fprintf(fic, "\"Date\": \"%d-%d-%d\",\n", annee, mois, jour);
-			fprintf(fic, "\"Temperature\": \"%s\",\n", temp);
-			fprintf(fic, "\"Humidite\": \"%s\",\n", hum);
-			fprintf(fic, "\"Luminosite\": \"%f\",\n", lum);
-		fprintf(fic, "}\n");
+	
+	char dir[50] = "";
+	FILE *fic;
+	
+	if(pleure == 1){
+		sprintf(dir, "/var/www/html/bCareful/data/pleure.json");
+		fic = fopen(dir, "w");
+	}
+	else{
+		sprintf(dir, "/var/www/html/bCareful/data/%ld.json", timestamp);
+		fic = fopen(dir, "a");
+	}
+		
+	fprintf(fic, "[\n");	
+		fprintf(fic, "\t{\n");
+			fprintf(fic, "\t\t\"Temperature\": %s,\n", temp);
+			fprintf(fic, "\t\t\"Humidite\": %s,\n", hum);
+			fprintf(fic, "\t\t\"Luminosite\": %s\n", lum);
+			fprintf(fic, "\t\t\"Timestamp\": %ld\n", timestamp);
+		fprintf(fic, "\t}\n");
 	fprintf(fic, "]\n");
+	
+	fclose(fic);
+	
+	return 1;
 }

@@ -8,7 +8,7 @@
 
 typedef unsigned int uint;
 
-int main(void)
+int ecoute(void)
 {
 
 	if(wiringPiSetup() == -1){ //when initialize wiring failed,print messageto screen
@@ -16,7 +16,6 @@ int main(void)
 		return 1; 
 	}
     int dat1 = 1;
-    printf("dat1 : %d", dat1);
     do{
 		pinMode( MIC_DO_Pin, OUTPUT );
 		digitalWrite( MIC_DO_Pin, LOW );
@@ -25,7 +24,6 @@ int main(void)
 		delayMicroseconds( 40 );
 		pinMode( MIC_DO_Pin, INPUT );
 		dat1 = digitalRead(MIC_DO_Pin);
-		printf("dat1 : %d", dat1);
 	}while(dat1 == 1);
 
 	return 1;
