@@ -10,6 +10,7 @@
 char *mainTemp;
 char *mainHum;
 char *mainLum;
+int etat = 1;
 
 //Thread Micro
 void *mic(void *arg)
@@ -17,7 +18,7 @@ void *mic(void *arg)
 	if(wiringPiSetup() == -1)
 		exit(0);
 
-	while(1){
+	while(etat == 1){
 		if(ecoute() == 1){
 			printf("Bébé pleure !");
 			json(mainTemp, mainHum, mainLum, 1);
@@ -33,7 +34,7 @@ void *lecture(void *arg)
 	if(wiringPiSetup() == -1)
 		exit(0);
 
-	while(1){
+	while(etat == 1){
 		printf("Acquisition des donées\n");
 		mainTemp = read_dht11_temp();
 		mainHum = read_dht11_hum();
@@ -42,7 +43,7 @@ void *lecture(void *arg)
 		/*printf("Temperature :%s °C \n", temp);
 		printf("Humidite :%s %c \n", hum, '%');
 		printf("Luminosite :%s %c \n", lum, '%');*/
-		
+		//getchar();
 		json(mainTemp, mainHum, mainLum, 0);
 
 		sleep(60);
@@ -54,6 +55,8 @@ int main()
 {
 	pthread_t thread1;
 	pthread_t thread2;
+	
+	iniData();
 	
 	if(pthread_create(&thread1, NULL, lecture, NULL) == -1){
 		perror("pthread_create");
