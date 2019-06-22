@@ -14,17 +14,11 @@
       $("#header").load("header.html");
     });
   </script> 
-  <script src="jsFunctions/JSONReader.js"></script>
+  <script src="jsFunctions/jsonReader.js"></script>
 </head>
 
 
-<body onload="readTextFile('../../data/test.json', function(text){
-  var data = JSON.parse(text);
-  console.log(data);
-  data.forEach(element => {
-    console.log(element.Humidite);
-  });
-});">
+<body onload="readTextFile('../data/test.json');">
 
   <!-- container section start -->
   <section id="container" class="">
@@ -46,7 +40,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box blue-bg">
               <i class="fa fa-cloud"></i>
-              <div class="count">6.674</div>
+              <div class="count" id="humId">No Data</div>
               <div class="title">taux d'humidité</div>
             </div>
             <!--/.info-box-->
@@ -56,7 +50,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box brown-bg">
               <i class="fa fa-thermometer-2"></i>
-              <div class="count">23.5</div>
+              <div class="count" id="tempId">No Data</div>
               <div class="title">température</div>
             </div>
             <!--/.info-box-->
@@ -66,7 +60,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box dark-bg">
               <i class="fa fa-lightbulb-o"></i>
-              <div class="count">75</div>
+              <div class="count" id="lumId">No Data</div>
               <div class="title">Luminosité</div>
             </div>
             <!--/.info-box-->
