@@ -119,7 +119,8 @@ static const char* battery_status_flag_desc[] = {
 const uint8_t battery_status_flag_desc_err_index = 2;
 
 void iot_publish_variable(const char* name, int32_t value){
-    sprintf(dir, "/home/pi/Downloads/bCareful-master/data/data.json");
+    sprintf(dir, "/var/www/html/bCareful/data/bebe.json");
+    
     fic = fopen(dir, "a");
     fprintf(fic, "[\n\t{\n\t\t\"%s\" : %d\n\t }\n]\n", name, value);
     fclose(fic);
