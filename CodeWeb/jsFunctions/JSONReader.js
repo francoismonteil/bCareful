@@ -3,9 +3,16 @@ function sleep(miliseconds){
     while (currentTime + miliseconds >= new Date().getTime()){
 
     }
-}
+};
 
-function readTextFile(file, callback) {
+function onloadCall(){
+
+    console.log('coucou');
+    readTextFile('data/test.json');
+    readDataFile('data/data.json');
+};
+
+function readTextFile(file) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
     rawFile.open("GET", file, true);
@@ -17,13 +24,24 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 };
 
+function readDataFile(file) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            readData(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+};
+
 function createChartArray(text){
     var data = JSON.parse(text);
 
     tempArray=[]; tempMoy=0;
     humArray=[]; humMoy=0;
     lumArray=[]; lumMoy=0;
-    soundArray=[];
 
     valueCpt=0;
 
@@ -42,9 +60,24 @@ function createChartArray(text){
     document.getElementById('tempId').innerHTML=""+tempMoy+"°C";
     document.getElementById('lumId').innerHTML=""+lumMoy+"%";
 
-    console.log(humMoy);
-    console.log(tempMoy);
-    console.log(lumMoy);
+    //return([tempArray, tempMoy, humArray, humMoy, lumArray, lumMoy]);
+};
+
+function readData(text){
+    var data = JSON.parse(text);
+
+    soundArray=[];soundMoy=0;
+
+    valueCpt=0;
+
+    data.forEach(element => {
+        soundArray.push(element.Temperature); soundMoy+=element.audio;
+        valueCpt++;
+    });
+    
+    soundMoy=Math.floor(soundMoy/valueCpt);
+    
+    document.getElementById('soundId').innerHTML=""+soundMoy+"";
 
     //return([tempArray, tempMoy, humArray, humMoy, lumArray, lumMoy]);
 };
