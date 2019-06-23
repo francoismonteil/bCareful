@@ -1,0 +1,1395 @@
+[
+	{
+		"batt_soc" : 407
+	 }
+]
+[
+	{
+		"batt_volt" : 2407
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 24
+	 }
+]
+[
+	{
+		"batt_soc" : 353
+	 }
+]
+[
+	{
+		"batt_volt" : 2353
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 24
+	 }
+]
+[
+	{
+		"batt_soc" : 344
+	 }
+]
+[
+	{
+		"batt_volt" : 2344
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 0
+	 }
+]
+[
+	{
+		"audio" : 61
+	 }
+]
+[
+	{
+		"batt_soc" : 400
+	 }
+]
+[
+	{
+		"batt_volt" : 2400
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 12
+	 }
+]
+[
+	{
+		"audio" : 44
+	 }
+]
+[
+	{
+		"batt_soc" : 295
+	 }
+]
+[
+	{
+		"batt_volt" : 2295
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 12
+	 }
+]
+[
+	{
+		"audio" : 26
+	 }
+]
+[
+	{
+		"batt_soc" : 392
+	 }
+]
+[
+	{
+		"batt_volt" : 2392
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 12
+	 }
+]
+[
+	{
+		"audio" : 30
+	 }
+]
+[
+	{
+		"batt_soc" : 346
+	 }
+]
+[
+	{
+		"batt_volt" : 2346
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 36
+	 }
+]
+[
+	{
+		"batt_soc" : 294
+	 }
+]
+[
+	{
+		"batt_volt" : 2294
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 17
+	 }
+]
+[
+	{
+		"batt_soc" : 387
+	 }
+]
+[
+	{
+		"batt_volt" : 2387
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 207
+	 }
+]
+[
+	{
+		"batt_soc" : 368
+	 }
+]
+[
+	{
+		"batt_volt" : 2368
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 147
+	 }
+]
+[
+	{
+		"batt_soc" : 300
+	 }
+]
+[
+	{
+		"batt_volt" : 2300
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"batt_soc" : 367
+	 }
+]
+[
+	{
+		"batt_volt" : 2367
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 11
+	 }
+]
+[
+	{
+		"batt_soc" : 63
+	 }
+]
+[
+	{
+		"batt_volt" : 2063
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 155
+	 }
+]
+[
+	{
+		"batt_soc" : 280
+	 }
+]
+[
+	{
+		"batt_volt" : 2280
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 248
+	 }
+]
+[
+	{
+		"batt_soc" : 369
+	 }
+]
+[
+	{
+		"batt_volt" : 2369
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 220
+	 }
+]
+[
+	{
+		"batt_soc" : 327
+	 }
+]
+[
+	{
+		"batt_volt" : 2327
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 4
+	 }
+]
+[
+	{
+		"batt_soc" : 280
+	 }
+]
+[
+	{
+		"batt_volt" : 2280
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 17
+	 }
+]
+[
+	{
+		"batt_soc" : 307
+	 }
+]
+[
+	{
+		"batt_volt" : 2307
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 13
+	 }
+]
+[
+	{
+		"audio" : 44
+	 }
+]
+[
+	{
+		"batt_soc" : 291
+	 }
+]
+[
+	{
+		"batt_volt" : 2291
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 13
+	 }
+]
+[
+	{
+		"audio" : 160
+	 }
+]
+[
+	{
+		"batt_soc" : 218
+	 }
+]
+[
+	{
+		"batt_volt" : 2218
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 13
+	 }
+]
+[
+	{
+		"audio" : 225
+	 }
+]
+[
+	{
+		"batt_soc" : 297
+	 }
+]
+[
+	{
+		"batt_volt" : 2297
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 13
+	 }
+]
+[
+	{
+		"audio" : 9
+	 }
+]
+[
+	{
+		"batt_soc" : 280
+	 }
+]
+[
+	{
+		"batt_volt" : 2280
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 14
+	 }
+]
+[
+	{
+		"audio" : 0
+	 }
+]
+[
+	{
+		"batt_soc" : 202
+	 }
+]
+[
+	{
+		"batt_volt" : 2202
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 224
+	 }
+]
+[
+	{
+		"batt_soc" : 292
+	 }
+]
+[
+	{
+		"batt_volt" : 2292
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 9
+	 }
+]
+[
+	{
+		"batt_soc" : 291
+	 }
+]
+[
+	{
+		"batt_volt" : 2291
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 233
+	 }
+]
+[
+	{
+		"batt_soc" : 154
+	 }
+]
+[
+	{
+		"batt_volt" : 2154
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 254
+	 }
+]
+[
+	{
+		"batt_soc" : 32
+	 }
+]
+[
+	{
+		"batt_volt" : 2032
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 16
+	 }
+]
+[
+	{
+		"batt_soc" : 280
+	 }
+]
+[
+	{
+		"batt_volt" : 2280
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 25
+	 }
+]
+[
+	{
+		"batt_soc" : 201
+	 }
+]
+[
+	{
+		"batt_volt" : 2201
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 58
+	 }
+]
+[
+	{
+		"batt_soc" : 272
+	 }
+]
+[
+	{
+		"batt_volt" : 2272
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 250
+	 }
+]
+[
+	{
+		"batt_soc" : 254
+	 }
+]
+[
+	{
+		"batt_volt" : 2254
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 50
+	 }
+]
+[
+	{
+		"batt_soc" : 141
+	 }
+]
+[
+	{
+		"batt_volt" : 2141
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 226
+	 }
+]
+[
+	{
+		"batt_soc" : 256
+	 }
+]
+[
+	{
+		"batt_volt" : 2256
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 155
+	 }
+]
+[
+	{
+		"batt_soc" : 257
+	 }
+]
+[
+	{
+		"batt_volt" : 2257
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 199
+	 }
+]
+[
+	{
+		"batt_soc" : 175
+	 }
+]
+[
+	{
+		"batt_volt" : 2175
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 32
+	 }
+]
+[
+	{
+		"batt_soc" : 259
+	 }
+]
+[
+	{
+		"batt_volt" : 2259
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 174
+	 }
+]
+[
+	{
+		"batt_soc" : 254
+	 }
+]
+[
+	{
+		"batt_volt" : 2254
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 23
+	 }
+]
+[
+	{
+		"batt_soc" : 173
+	 }
+]
+[
+	{
+		"batt_volt" : 2173
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 31
+	 }
+]
+[
+	{
+		"batt_soc" : 254
+	 }
+]
+[
+	{
+		"batt_volt" : 2254
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 35
+	 }
+]
+[
+	{
+		"batt_soc" : 253
+	 }
+]
+[
+	{
+		"batt_volt" : 2253
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 248
+	 }
+]
+[
+	{
+		"batt_soc" : 2
+	 }
+]
+[
+	{
+		"batt_volt" : 2002
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 229
+	 }
+]
+[
+	{
+		"batt_soc" : 233
+	 }
+]
+[
+	{
+		"batt_volt" : 2233
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 4
+	 }
+]
+[
+	{
+		"batt_soc" : 201
+	 }
+]
+[
+	{
+		"batt_volt" : 2201
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 29
+	 }
+]
+[
+	{
+		"batt_soc" : 159
+	 }
+]
+[
+	{
+		"batt_volt" : 2159
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 19
+	 }
+]
+[
+	{
+		"batt_soc" : 238
+	 }
+]
+[
+	{
+		"batt_volt" : 2238
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 14
+	 }
+]
+[
+	{
+		"batt_soc" : 220
+	 }
+]
+[
+	{
+		"batt_volt" : 2220
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 52
+	 }
+]
+[
+	{
+		"batt_soc" : 122
+	 }
+]
+[
+	{
+		"batt_volt" : 2122
+	 }
+]
+[
+	{
+		"batt_curr" : 0
+	 }
+]
+[
+	{
+		"batt_stat" : 1
+	 }
+]
+[
+	{
+		"light" : 11
+	 }
+]
+[
+	{
+		"audio" : 22
+	 }
+]
