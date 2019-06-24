@@ -7,7 +7,6 @@ function sleep(miliseconds){
 
 function onloadCall(){
 
-    console.log('coucou');
     readTextFile('data/data.json');
     readDataFile('data/dataBatt.json');
 };
