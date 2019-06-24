@@ -67,17 +67,22 @@ function readData(text){
     var data = JSON.parse(text);
 
     soundArray=[];soundMoy=0;
+    batt_voltArray=[]; nivBatt=0;
 
     valueCpt=0;
 
     data.forEach(element => {
         soundArray.push(element.Temperature); soundMoy+=element.audio;
+        batt_voltArray.push(element.batt_volt); nivBatt=element.batt_volt;
+        
         valueCpt++;
     });
     
-    soundMoy=Math.floor(soundMoy/valueCpt);
+    soundMoy=Math.floor(soundMoy/valueCpt*100/255);
+    nivBatt=Math.floor(nivBatt/5000*100);
     
     document.getElementById('soundId').innerHTML=""+soundMoy+"";
+    document.getElementById('nivBattId').innerHTML=""+nivBatt+"%";
 
     //return([tempArray, tempMoy, humArray, humMoy, lumArray, lumMoy]);
 };
