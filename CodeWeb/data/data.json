@@ -1,26 +1,32 @@
 [
 	{
-		"batt_soc" : 707,
-		"batt_volt" : 2707,
-		"batt_curr" : 0,
-		"batt_stat" : 1,
-		"audio" : 48,
-		"light" : 44
+		"Temperature": 24.0,
+		"Humidite": 65.0,
+		"Luminosite": 32.55
 	},
 	{
-		"batt_soc" : 534,
-		"batt_volt" : 2534,
-		"batt_curr" : 0,
-		"batt_stat" : 1,
-		"audio" : 40,
-		"light" : 88
+		"Temperature": 26.0,
+		"Humidite": 75.0,
+		"Luminosite": 22.55
 	},
 	{
-		"batt_soc" : 301,
-		"batt_volt" : 2301,
-		"batt_curr" : 0,
-		"batt_stat" : 1,
-		"audio" : 45,
-		"light" : 41  
+		"Temperature": 24.0,
+		"Humidite": 65.0,
+		"Luminosite": 32.55
+	},
+	{
+		"Temperature": 14.0,
+		"Humidite": 55.0,
+		"Luminosite": 12.55
+	},
+	{
+		"Temperature": 16.0,
+		"Humidite": 10.0,
+		"Luminosite": 24
+	},
+	{
+		"Temperature": 21.0,
+		"Humidite": 5.0,
+		"Luminosite": 15
 	}
 ]
