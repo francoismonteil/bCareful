@@ -121,7 +121,7 @@ const uint8_t battery_status_flag_desc_err_index = 2;
 void iot_publish_variable(const char* name, int32_t value){
     sprintf(dir, "/home/pi/Downloads/bCareful-master/data/data.json");
     fic = fopen(dir, "a");
-    fprintf(fic, "[\n\t{\n\t\t\"%s\" : %d\n\t }\n]\n", name, value);
+    fprintf(fic, "\n\t{\n\t\t\"%s\" : %d\n\t},", name, value);
     fclose(fic);
 }
 
@@ -463,7 +463,7 @@ int main(void){
     uuid_t characteristic_rx_uuid;
     int rc = -1;
 
-    rc = initialize(&client, "quickstart", "internetofthings.ibmcloud.com", "HummingBoard_SensiEdge",
+    /*rc = initialize(&client, "quickstart", "internetofthings.ibmcloud.com", "HummingBoard_SensiEdge",
                     "HB_SE_1", "token", "hb-se-1-t", "iot-embeddedc/IoTFoundation.pem", 
                     0, NULL, NULL, NULL, 0);
 
@@ -477,7 +477,7 @@ int main(void){
     if(rc != SUCCESS){
         printf("Connection returned rc = %d.\n Quitting..\n", rc);
         return 0;
-    }
+    }*/
 
     printf("Connection Successful. Press Ctrl+C to quit\n");
     
@@ -496,6 +496,10 @@ int main(void){
     gattlib_adapter_scan_disable(adapter);
 
     puts("Scan completed.");
+    sprintf(dir, "/home/pi/Downloads/bCareful-master/data/data.json");
+    fic = fopen(dir, "a");
+    fprintf(fic, "[");
+    fclose(fic);
     for (i = 0; i < CHARACTERISTICS_COUNT; i++){
 
         connections[i] = gattlib_connect(NULL, mac_adress, BDADDR_LE_PUBLIC);
@@ -509,7 +513,7 @@ int main(void){
             continue;
         }
 
-        gattlib_register_notification(connections[i], notification_handlers[i], NULL);
+        /*gattlib_register_notification(connections[i], notification_handlers[i], NULL);
 
         ret = gattlib_notification_start(connections[i], &characteristic_rx_uuid);
         if (ret){
@@ -520,7 +524,7 @@ int main(void){
         if (ret){
             fprintf(stderr, "Fail to start notification\n.");
             continue;
-        }
+        }*/
     }
 
     GMainLoop *loop = g_main_loop_new(NULL, 0);
@@ -535,6 +539,10 @@ int main(void){
     }
 
     printf("Quitting!!\n");
+    sprintf(dir, "/home/pi/Downloads/bCareful-master/data/data.json");
+    fic = fopen(dir, "a");
+    fprintf(fic, "\n]");
+    fclose(fic);
 
     disconnect(&client);
 
